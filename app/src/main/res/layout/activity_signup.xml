@@ -122,26 +122,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="409dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail">-->
+    <ImageView
+        android:id="@+id/imgFirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilFirstname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilFirstname"
+        app:srcCompat="@drawable/ic_baseline_person_add_24" />
 
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilLastname"
+        app:srcCompat="@drawable/ic_baseline_email_24" />
 
-<!--    <com.google.android.material.textfield.TextInputEditText-->
-<!--        android:id="@+id/tilEmail"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Enter email"-->
-<!--        android:textAlignment="center"-->
-<!--        tools:layout_editor_absoluteX="-3dp"-->
-<!--        tools:layout_editor_absoluteY="155dp" />-->
+    <ImageView
+        android:id="@+id/imgPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilConfirmpassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilFirstname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_add_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

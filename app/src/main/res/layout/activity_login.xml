@@ -14,7 +14,7 @@
         app:layout_constraintGuide_percent="0.4" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmail"
+        android:id="@+id/tilEmail1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -28,7 +28,7 @@
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:background="@android:color/transparent"
-            android:id="@+id/etEmail"
+            android:id="@+id/etEmail1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_email"
@@ -36,25 +36,40 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPassword"
+        android:id="@+id/tilPassword2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail1"
+        app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/etPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
             android:hint="@string/enter_password"
-            android:textAlignment="center" />
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/teal_200"
+        android:text="Signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -63,21 +78,65 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/login"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword2" />
 
-    <TextView
-        android:id="@+id/tvSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="74dp"
-        android:background="@color/purple_500"
-        android:text="@string/signup"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/tilEmail"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail"-->
+<!--        app:passwordToggleEnabled="true">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etEmail"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:hint="@string/enter_password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:textAlignment="center"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLogin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:text="@string/login"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSignup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="74dp"-->
+<!--        android:background="@color/purple_500"-->
+<!--        android:text="@string/signup"-->
+<!--        android:textStyle="bold|italic"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />-->
+
+    <!--        android:id="@+id/editTextTextPassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        tools:layout_editor_absoluteX="98dp"-->
+<!--        tools:layout_editor_absoluteY="125dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 

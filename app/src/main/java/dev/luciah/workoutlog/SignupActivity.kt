@@ -29,10 +29,13 @@ class SignupActivity : AppCompatActivity() {
         btnSignup.setOnClickListener {
 
         }
+        btnSignup.setOnClickListener {
+            validateSignup()
+
+        }
         tvLogin.setOnClickListener {
             var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-            validateSignup()
         }
         tilFirstname = findViewById(R.id.tilFirstname)
         tilLastname = findViewById(R.id.tilLastname)

@@ -9,4 +9,10 @@
     <string name="confirm_password">Enter password</string>
     <string name="enter_last_name">Enter last name</string>
     <string name="enter_first_name">Enter first name</string>
+    <string name="profile">Profile</string>
+    <string name="track">Track</string>
+    <string name="plan">Plan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plan_fragment">Plan fragment</string>
 </resources>

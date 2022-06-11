@@ -21,16 +21,20 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="24dp"
+        app:boxCornerRadiusBottomStart="24dp"
+        app:boxCornerRadiusTopEnd="24dp"
+        app:boxCornerRadiusTopStart="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:background="@android:color/transparent"
             android:id="@+id/etEmail1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:hint="@string/enter_email"
             android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -44,6 +48,10 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="24dp"
+        app:boxCornerRadiusBottomStart="24dp"
+        app:boxCornerRadiusTopEnd="24dp"
+        app:boxCornerRadiusTopStart="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail1"

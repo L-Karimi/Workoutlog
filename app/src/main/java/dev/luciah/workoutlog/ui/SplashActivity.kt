@@ -1,4 +1,4 @@
-package dev.luciah.workoutlog
+package dev.luciah.workoutlog.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

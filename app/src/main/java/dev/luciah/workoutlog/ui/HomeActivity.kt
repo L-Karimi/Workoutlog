@@ -1,9 +1,10 @@
-package dev.luciah.workoutlog
+package dev.luciah.workoutlog.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dev.luciah.workoutlog.R
 
 class HomeActivity : AppCompatActivity() {
     lateinit var fcvHome: FragmentContainerView

@@ -1,3 +1,6 @@
 package dev.luciah.workoutlog.models
 
-data class RegisterResponse()
+data class RegisterResponse(
+    var message:String,
+    var user:User
+)

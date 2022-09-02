@@ -17,4 +17,6 @@
     <string name="plan_fragment">Plan fragment</string>
     <string name="hello_profile_fragment">Hello profile fragment</string>
     <string name="hello_track_fragment">Hello track fragment</string>
+    <string name="loginsignup">Login</string>
+    <string name="enter_phone_number">Enter phone number</string>
 </resources>

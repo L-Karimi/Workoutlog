@@ -78,7 +78,7 @@
             android:ems="10"
             android:hint="@string/enter_email"
             android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck"
+            tools:ignore="SpeakableTextPresentCheck,TextFields"
             tools:layout_editor_absoluteX="76dp"
             tools:layout_editor_absoluteY="313dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="32dp"
         android:text="Signup"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,10 +131,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="32dp"
         android:background="@color/teal_200"
-        android:text="Login"
+        android:text="@string/loginsignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
@@ -183,7 +183,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_person_add_24" />
 
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilPhonenumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPassword"
+        app:srcCompat="@drawable/ic_baseline_local_phone_24" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPhonenumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="35dp"
+        android:background="@android:color/transparent"
+        app:boxCornerRadiusTopEnd="24dp"
+        app:boxCornerRadiusTopStart="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilConfirmpassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietPhonenum"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/enter_phone_number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,5 +8,5 @@ import retrofit2.http.POST
 
 interface ApiInterface {
     @POST("/register")
-    fun  registerUser(@Body registerREquest:RegisterRequest):Call<RegisterResponse>
+    fun  registerUser(@Body registerRequest:RegisterRequest):Call<RegisterResponse>
 }

@@ -40,7 +40,10 @@ class LoginActivity : AppCompatActivity() {
                 binding.tilPassword2.error = "Password is required"
                 error = true
             }
-
+            if (!error) {
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }
 
         }
     }

@@ -11,8 +11,8 @@ import dev.luciah.workoutlog.models.RegisterResponse
 import dev.luciah.workoutlog.retrofit.ApiClient
 import dev.luciah.workoutlog.retrofit.ApiInterface
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class SignupActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignupBinding
@@ -35,7 +35,7 @@ class SignupActivity : AppCompatActivity() {
     fun validateSignup() {
         val firstname = binding.etFirstname.text.toString()
         val lastname = binding.etLastname.text.toString()
-        val email=binding.etEmail.text.toString()
+        val email = binding.etEmail.text.toString()
         val password = binding.etpassword.text.toString()
         val phoneNumber = binding.tietPhonenum.text.toString()
         var error = false
@@ -46,53 +46,62 @@ class SignupActivity : AppCompatActivity() {
         if (lastname.isBlank()) {
             binding.tilLastname.error = getString(R.string.enter_last_name)
         }
-        if (email.isBlank()){
-            binding.tilEmail.error=getString(R.string.enter_email)
+        if (email.isBlank()) {
+            binding.tilEmail.error = getString(R.string.enter_email)
         }
-        if (password.isBlank()){
-            binding.etpassword.error=getString(R.string.enter_password)
+        if (password.isBlank()) {
+            binding.etpassword.error = getString(R.string.enter_password)
         }
-        if (password.length<8) {
+        if (password.length < 8) {
             binding.tilConfirmpassword.error = "Password is too short"
         }
-        if (password.length>16){
-            binding.tilConfirmpassword.error="Password is too long"
+        if (password.length > 16) {
+            binding.tilConfirmpassword.error = "Password is too long"
         }
         if (phoneNumber.isBlank()) {
             binding.tietPhonenum.error = "Enter phone number"
         }
         if (!error) {
-            val registerRequest = RegisterRequest(firstname, lastname, phoneNumber, password,email)
+            val registerRequest = RegisterRequest(firstname, lastname, phoneNumber, password, email)
             makeRegistrationRequest(registerRequest)
         }
     }
 
-    fun makeRegistrationRequest(registerRequest: RegisterRequest){
+    fun makeRegistrationRequest(registerRequest: RegisterRequest) {
         val apiclient = ApiClient.buildApiClient(ApiInterface::class.java)
         val request = apiclient.registerUser(registerRequest)
 
-        request.enqueue(object : Callback<RegisterResponse>, retrofit2.Callback<RegisterResponse> {
-            override fun onResponse(
-                call: Call<RegisterResponse>,
-                response: Response<RegisterResponse>
+        request.enqueue(object : Callback<RegisterResponse> {
+            override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>
             ) {
-                if(response.isSuccessful){
-                    val message = response.body()?.message
-                    Toast.makeText(baseContext,message,Toast.LENGTH_LONG).show()            }
-                else{
-                    val error = response.errorBody()?.string()
-                    Toast.makeText(baseContext,error,Toast.LENGTH_LONG).show()
-                }
+            if (response.isSuccessful) {
+                var message = null
+                Toast.makeText(baseContext, message, Toast.LENGTH_LONG).show()
 
             }
+            else {
+                    var error = response.errorBody()?.string()
+                    Toast.makeText(baseContext, error, Toast.LENGTH_LONG).show()
+                }
+
+
+        }
+
             override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+                binding
+                Toast.makeText(baseContext,t.message,Toast.LENGTH_LONG).show()
             }
 
         })
-    }
 
+        }
 }
+
+
+
+
+
+
 
 
 

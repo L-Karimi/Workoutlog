@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pbLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity">
@@ -91,60 +92,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword2" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmail1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:id="@+id/tilEmail"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail"-->
-<!--        app:passwordToggleEnabled="true">-->
+    <!--        android:id="@+id/tilEmail"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail"-->
+    <!--        app:passwordToggleEnabled="true">-->
 
-<!--        <EditText-->
-<!--            android:id="@+id/etEmail"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@android:color/transparent"-->
-<!--            android:hint="@string/enter_password"-->
-<!--            android:inputType="textPassword"-->
-<!--            android:textAlignment="center"-->
-<!--            tools:ignore="SpeakableTextPresentCheck" />-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <!--        <EditText-->
+    <!--            android:id="@+id/etEmail"-->
+    <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@android:color/transparent"-->
+    <!--            android:hint="@string/enter_password"-->
+    <!--            android:inputType="textPassword"-->
+    <!--            android:textAlignment="center"-->
+    <!--            tools:ignore="SpeakableTextPresentCheck" />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/btnLogin"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:text="@string/login"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btnLogin"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        android:text="@string/login"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tilEmail" />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/tvSignup"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="74dp"-->
-<!--        android:background="@color/purple_500"-->
-<!--        android:text="@string/signup"-->
-<!--        android:textStyle="bold|italic"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvSignup"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="74dp"-->
+    <!--        android:background="@color/purple_500"-->
+    <!--        android:text="@string/signup"-->
+    <!--        android:textStyle="bold|italic"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />-->
 
     <!--        android:id="@+id/editTextTextPassword"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:ems="10"-->
-<!--        tools:layout_editor_absoluteX="98dp"-->
-<!--        tools:layout_editor_absoluteY="125dp" />-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:ems="10"-->
+    <!--        tools:layout_editor_absoluteX="98dp"-->
+    <!--        tools:layout_editor_absoluteY="125dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 

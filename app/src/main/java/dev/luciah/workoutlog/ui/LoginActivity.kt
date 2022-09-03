@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        sharedPref = getSharedPreferences("WORKOUTLOG=PREFS", MODE_PRIVATE)
+        sharedPref = getSharedPreferences("WORKOUTLOG_PREFS", MODE_PRIVATE)
         binding.btnLogin.setOnClickListener {
             validateLogin()
         }

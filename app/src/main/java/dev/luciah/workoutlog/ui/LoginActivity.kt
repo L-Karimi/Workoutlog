@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import dev.luciah.workoutlog.databinding.ActivityLoginBinding
 import dev.luciah.workoutlog.models.LoginRequest
 import dev.luciah.workoutlog.models.LoginResponse
-import dev.luciah.workoutlog.retrofit.ApiClient
-import dev.luciah.workoutlog.retrofit.ApiInterface
+import dev.luciah.workoutlog.api.ApiClient
+import dev.luciah.workoutlog.api.ApiInterface
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

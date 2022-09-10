@@ -8,8 +8,8 @@ import dev.luciah.workoutlog.R
 import dev.luciah.workoutlog.databinding.ActivitySignupBinding
 import dev.luciah.workoutlog.models.RegisterRequest
 import dev.luciah.workoutlog.models.RegisterResponse
-import dev.luciah.workoutlog.retrofit.ApiClient
-import dev.luciah.workoutlog.retrofit.ApiInterface
+import dev.luciah.workoutlog.api.ApiClient
+import dev.luciah.workoutlog.api.ApiInterface
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -72,29 +72,29 @@ class SignupActivity : AppCompatActivity() {
         val request = apiclient.registerUser(registerRequest)
 
         request.enqueue(object : Callback<RegisterResponse> {
-            override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>
+            override fun onResponse(
+                call: Call<RegisterResponse>, response: Response<RegisterResponse>
             ) {
-            if (response.isSuccessful) {
-                var message = null
-                Toast.makeText(baseContext, message, Toast.LENGTH_LONG).show()
+                if (response.isSuccessful) {
+                    var message = null
+                    Toast.makeText(baseContext, message, Toast.LENGTH_LONG).show()
 
-            }
-            else {
+                } else {
                     var error = response.errorBody()?.string()
                     Toast.makeText(baseContext, error, Toast.LENGTH_LONG).show()
                 }
 
 
-        }
+            }
 
             override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
                 binding
-                Toast.makeText(baseContext,t.message,Toast.LENGTH_LONG).show()
+                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
             }
 
         })
 
-        }
+    }
 }
 
 
